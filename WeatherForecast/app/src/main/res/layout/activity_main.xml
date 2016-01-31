@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:id="@+id/relativelayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Forecast Search"
+        android:id="@+id/TitletextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentLeft="false"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Street: "
+        android:id="@+id/StrtextView"
+        android:layout_below="@+id/TitletextView"
+        android:layout_toLeftOf="@+id/TitletextView"
+        android:layout_toStartOf="@+id/TitletextView"
+        android:layout_marginTop="60dp"
+        android:textStyle="normal" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/street"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:focusable="true"
+        android:layout_alignTop="@+id/StrtextView"
+        android:layout_alignBaseline="@+id/StrtextView"
+        android:layout_toRightOf="@+id/StrtextView"
+        android:layout_toStartOf="@+id/cls"
+        android:layout_alignRight="@+id/city"
+        android:layout_alignEnd="@+id/city" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="City: "
+        android:id="@+id/CitytextView"
+        android:layout_below="@+id/StrtextView"
+        android:layout_toLeftOf="@+id/TitletextView"
+        android:layout_toStartOf="@+id/TitletextView"
+        android:layout_marginTop="22dp"
+        android:textStyle="normal" />
+    <EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/city"
+    android:singleLine="true"
+    android:maxLines="1"
+    android:layout_above="@+id/StatetextView"
+    android:layout_toRightOf="@+id/CitytextView"
+
+    android:layout_alignRight="@+id/TitletextView"
+    android:layout_alignEnd="@+id/TitletextView"
+    android:layout_alignBaseline="@+id/CitytextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="State: "
+        android:id="@+id/StatetextView"
+        android:layout_below="@+id/CitytextView"
+        android:layout_toLeftOf="@+id/TitletextView"
+        android:layout_toStartOf="@+id/TitletextView"
+        android:layout_marginTop="26dp"
+        android:textStyle="normal" />
+
+
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/state"
+        android:spinnerMode="dropdown"
+        android:entries="@array/spinnerItems"
+        android:layout_alignTop="@+id/StatetextView"
+        android:layout_toRightOf="@+id/StatetextView"
+        android:layout_toEndOf="@+id/StatetextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Degree: "
+        android:id="@+id/DegreeText"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_toLeftOf="@+id/state"
+        android:layout_toStartOf="@+id/state" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/DegreeText"
+        android:layout_toEndOf="@+id/DegreeText">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"
+            android:id="@+id/us"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celsius"
+            android:id="@+id/si"
+            android:checked="false" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/srch"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/DegreeText"
+        android:layout_alignStart="@+id/DegreeText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/cls"
+        android:layout_above="@+id/errorLbl"
+        android:layout_toLeftOf="@+id/emptyLbl"
+        android:layout_toStartOf="@+id/emptyLbl" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ksjdfhkjsdhf ahsdjk ksjdfhkjsdhf ahsdjkksjdfhkjsdhf ahsdjk"
+        android:id="@+id/errorLbl"
+        android:textColor="#ff0900"
+        android:layout_below="@+id/srch"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:id="@+id/abt"
+        android:layout_below="@+id/errorLbl"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Powered By:"
+        android:id="@+id/poweredtext"
+        android:layout_below="@+id/abt"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignRight="@+id/poweredtext"
+        android:layout_alignEnd="@+id/poweredtext"
+        android:background="@drawable/forecast_logo"
+        android:layout_toRightOf="@+id/abt"
+        android:layout_toEndOf="@+id/abt"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/poweredtext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="        "
+        android:id="@+id/emptyLbl"
+        android:layout_above="@+id/cls"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="                   "
+        android:id="@+id/textView2"
+        android:layout_below="@+id/state"
+        android:layout_alignRight="@+id/state"
+        android:layout_alignEnd="@+id/state" />
+
+</RelativeLayout>
